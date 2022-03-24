@@ -1,0 +1,58 @@
+
+@import '../../setting';
+
+.board-collumns{
+    overflow-y: hidden;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    height: 78vh;
+
+    .smooth-dnd-container.horizontal{
+        max-width: max-content;
+        .smooth-dnd-container.horizontal{
+
+            width: max-content;
+        }
+        .collumn-card {
+            height: auto !important;
+        
+        }
+    }
+    
+
+
+    .collumn-drop-preview {
+        background-color: rgba(150, 150, 200, 0.1);
+        border: 1px dashed #abc;
+        margin: 5px 45px 5px 5px;
+    }
+    
+    .addCollumn{
+        height: max-content;
+        width: $width-collumn;
+        background-color: transparent;
+        border:none;
+        padding: 0 !important;
+        .addTitle{
+            background: rgba(#fff, 0.4);
+
+            cursor: pointer;
+            &:hover{
+                background: rgba(#fff, 0.6);
+                
+            }
+        }
+        
+
+        .formAddCol{
+            background-color: #fff;
+
+            .btn-group{
+                margin-top: 5px;
+                display: flex;
+               
+            }
+        }
+    }
+}
+

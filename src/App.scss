@@ -1,0 +1,29 @@
+@import './setting';
+$board-bg-color : green;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.trello_container{
+  height: 100vh;
+  background-color: $board-bg-color;
+}
+
+.plus-icon{
+  font-size: 14px;
+  margin-right: $gap;
+}
+.btn:focus, .btn:active{
+  outline: none !important;
+  box-shadow: none !important;
+}
+.trelloEditTitle{
+  background-color: inherit;
+  border:none;
+  font-size: inherit;
+  font-weight: inherit;
+  cursor: pointer;
+}

@@ -1,0 +1,99 @@
+@import '../../setting';
+
+
+.board-collumn{
+    width: $width-collumn;
+    margin-right: 20px;
+
+    
+    .board-card{
+        max-height: 80vh;
+        .collumn_header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .column-drag-handle{
+                cursor: pointer;
+                flex-grow: 1;
+                margin-right: 3px;
+            }
+            .btnDropdown{
+                padding: 0px 10px 7px 10px;
+                font-weight: bold;
+                line-height: 10px;
+                font-size: 16px;
+                &::after{
+                    content: '...';
+                    border:none;
+                }
+                &:hover{
+                    background-color: #ccc;
+                }
+               
+            }
+            .dropdown-item-text{
+                cursor: pointer;
+                margin: 0 $gap;
+                border-radius: 5px;
+                &:hover{
+                    background-color: #ccc;
+                }
+            }
+        }
+        .collumn_body{
+            max-height: 63vh;
+            overflow-y: auto;
+
+            .card-ghost {
+                transition: transform 0.18s ease;
+                transform: rotateZ(5deg);
+                font-weight: bold;
+            }
+
+            .card-ghost-drop{
+                font-weight: bold;
+                transition: transform 0.18s ease-in-out;
+                transform: rotateZ(0deg)
+            }
+            .drop-preview {
+                background-color: rgba(150, 150, 200, 0.1);
+                border: 1px dashed #abc;
+                margin: 5px;
+            }
+            .card-item{
+                border: 1px solid #ccc;
+                padding: $gap;
+                border-radius: $gap;
+                cursor: pointer;
+                background-color: #ccc;
+                margin-bottom: $gap;
+            }
+        }
+
+        .addCard{
+            padding: 4px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            &:hover{
+                border :1px solid #ccc;
+                border-radius: 4px;
+                background-color: #ccc;
+            }
+        }
+        .add-card-form{
+
+            textarea{
+
+                min-height: 54px;
+                max-height: 162px;
+            }
+        }
+    }
+        
+    
+    
+
+}
